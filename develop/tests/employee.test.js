@@ -1,12 +1,6 @@
-const { isMainThread } = require("node:worker_threads");
-const employee = require("../lib/employee");
+//require the employee file 
+const Employee = require("../lib/Employee");
 
-describe("Employee", () => {
-    it("Should instantiate a new Employee", () => {
-        const newEmployee = new Employee();
-
-        expext(typeof(newEmployee)).toBe("object");
-    })
-});
-
-describe()
+test("Can create a new Employee", () => {
+    const newEmp = new Employee
+})
