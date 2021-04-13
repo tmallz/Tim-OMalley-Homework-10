@@ -14,3 +14,6 @@ const inquirer = require('inquirer');
         //interns  have a school
 
 //Take the info from inquirer/employee choice and generate the HTML
+
+//write tests to test the application
+
