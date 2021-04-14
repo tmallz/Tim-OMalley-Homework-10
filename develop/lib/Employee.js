@@ -1,14 +1,9 @@
 //Defines the Employee class
 class Employee {
-    constructor(type, name, id, email){
-        this.type = type;
+    constructor(name, id, email){
         this.name = name;
         this.id = id;
         this.email = email;
-    }
-    
-    getType(){
-        return this.type;
     }
 
     getName(){
@@ -21,6 +16,10 @@ class Employee {
 
     getEmail(){
         return this.email;
+    }
+
+    getType(){
+        return "Employee";
     }
 
 }
