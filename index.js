@@ -78,16 +78,22 @@ function newEmployeeCheck(){
                 addNewEmployee();
                 break;
             case "no":
-                console.log('No');
-                writeToFile('index.html', generateHTML(myTeam));
-
+                writeToFile("index.html", generateHTML(myTeam));
         }
     })
 }
 
-writes the index.html file given the generated HTML
+//writes the index.html file given the generated HTML
 function writeToFile(fileName, data){
-  fs.writeFileSync(path.join(process.cwd(), fileName), data)
+    try{
+        let test =  fs.writeFileSync(path.join(process.cwd(), fileName), data);
+        console.log('success!');
+        return test;
+    }
+    catch{
+        return console.log('HTML generation failed');
+    }
+  
 }
 
 
