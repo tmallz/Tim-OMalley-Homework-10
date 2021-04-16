@@ -16,8 +16,4 @@ class Intern extends Employee{
     }
 }
 
-const intern = new Intern('tim', 1, 'anemail', 'Iowa');
-
-console.log(intern);
-
 module.exports = Intern;

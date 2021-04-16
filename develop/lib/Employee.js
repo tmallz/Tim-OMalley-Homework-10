@@ -24,11 +24,4 @@ class Employee {
 
 }
 
-// const employee = new Employee('manager', 'tim', 1, 'spam@email.com');
-
-// employee.printInfo();
-
-// console.log(employee);
-
-//Exports the Employee class 
 module.exports = Employee;
