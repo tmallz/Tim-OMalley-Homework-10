@@ -15,6 +15,7 @@ const generateHTML = require('./develop/dist/generateHTML')
 //importing inquirerer and fs
 const fs = require('fs');
 const inquirer = require('inquirer');
+const path = require("path")
 
 //create an array to house myTeam
 const myTeam = [];
@@ -25,7 +26,6 @@ function addEngineer(){
     inquirer.prompt(engineerQuestions).then(response => {
         const engineer = new Engineer(response.name, response.ID, response.email, response.gitHub);
         myTeam.push(engineer);
-        console.log(myTeam);
         newEmployeeCheck();
     })
 }
@@ -35,7 +35,6 @@ function addIntern(){
     inquirer.prompt(internQuestions).then(response => {
         const intern = new Intern(response.name, response.ID, response.email, response.school);
         myTeam.push(intern);
-        console.log(myTeam);
         newEmployeeCheck();
     })
 }
@@ -51,11 +50,9 @@ function addNewEmployee(){
      .then((response) => {
         switch (response.role){
             case "Engineer":
-                console.log('Engineer')
                 addEngineer()
                 break;
             case "Intern":
-                console.log('Intern');
                 addIntern()
                 break;
         }
@@ -86,7 +83,7 @@ function newEmployeeCheck(){
 //writes the index.html file given the generated HTML
 function writeToFile(fileName, data){
     try{
-        let test =  fs.writeFileSync(path.join(process.cwd(), fileName), data);
+        let test = fs.writeFileSync(path.join(process.cwd(), fileName), data);
         console.log('success!');
         return test;
     }

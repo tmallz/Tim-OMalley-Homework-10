@@ -6,7 +6,7 @@ function roleSpecifics(teamMember){
         case 'Engineer':
             return `Github: <a href= "https://github.com/${teamMember.getGitHub()}" target= "_blank"> ${teamMember.getGitHub()}<a>`;
         case 'Intern':
-            return
+            return `School: ${teamMember.getSchool()}`;
     }
 }
 
@@ -37,7 +37,7 @@ function generateFullHTML(teamArray){
     <head>
         <meta charset='utf-8'>
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-        <title>Page Title</title>
+        <title>Employee Tracker</title>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">

@@ -16,7 +16,7 @@ const internQuestions = [
     },
     {
         type: 'input',
-        name: 'School',
+        name: 'school',
         message: 'What school does the intern go to?'
     },
 ]
